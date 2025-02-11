@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <form >
+        <label for="name">NAME :</label>
+        <input type="name" id="name"><br><br>
+
+        <label for="email">EMAIL :</label>
+        <input type="email" id="email"><br><br>
+
+        <label for="password">PASSWORD :</label>
+        <input type="password" id="password"><br><br>
+
+        <label for="num">NUMBER :</label>
+        <input type="num"  id="num"><br>
+
+        <button onclick="handle_click(event)">sumbit</button>
+        <div id="div"></div>
+        
+    </form>
+        <script>
+            
+            function handle_click(e){
+                e.preventDefault()
+                // var nam = document.getElementById("name").value
+                // var a = document.getElementById("div")
+                // var p = document.createElement("p")
+                // p.innerHTML=nam
+                // a.appendChild(p)
+
+                // var mail = document.getElementById("email").value
+                // var a1 = document.getElementById("div")
+                // var p1 = document.createElement("p")
+                // p1.innerHTML=mail
+                // a1.appendChild(p1) 
+
+
+                var a = document.getElementById("name").value 
+                var b = document.getElementById("email").value
+                var c = document.getElementById("password").value
+                var d = document.getElementById("num").value
+                var di = document.getElementById("div")
+               
+                arr = [a,b,c,d]
+                for(i=0 ; i<arr.length ; i++){    
+                    var p = document.createElement("p")
+                    p.innerHTML = arr[i]
+                    di.appendChild(p)
+                   
+                }
+                document.getElementById("name").value=""
+                document.getElementById("email").value =""
+                document.getElementById("password").value="" 
+                document.getElementById("num").value="" 
+
+
+            
+
+
+            }
+        </script>
+        
+
+
+    
+ </body>
+</html>

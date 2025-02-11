@@ -57,7 +57,7 @@
 
 
 
-      <input type="text" id="text">
+      <!-- <input type="text" id="text">
       <button onclick="handle_click()" >click</button>
       <input type="text" id="text1">
       <button onclick="handle_click1()">click</button>
@@ -80,11 +80,33 @@
             d.appendChild(li)
             document.getElementById("text1").value =" "
         }
+    </script>   -->
 
 
-    </script>  
+    <input type="text"  id="text">
+    <button onclick="handle_click()">click</button>
+    <ul id="ul"></ul>
+    <ol id="ol"></ol>
+    <script>
+        function handle_click(){
+            var a =document.getElementById("text").value
+            var ul = document.getElementById("ul")
+            var uli = document.createElement("li")
+            var ol = document.getElementById("ol")
+            var oli = document.createElement("li")
+            uli.innerHTML=a
+            ul.append(uli)
+            oli.innerHTML=a
+            ol.append(oli)
+            document.getElementById("text").value = ""
+
+        }
+    </script>
 
      
+
+
+
     
 </body>
 </html>

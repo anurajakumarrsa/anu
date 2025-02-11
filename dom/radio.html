@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <label >Gender:</label>
+    <label >Male:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label >Female:</label>
+    <input type="radio" id="female" name="gender" value="female">
+
+
+    <button onclick="handle_click()">click</button>
+    <div id="di"></div>
+    
+    <script>
+        function handle_click(){
+            var a = document.getElementById("male")
+            var b = document.getElementById("female")
+            var div = document.getElementById("di")
+            
+            if(a.checked==true ){
+                div.innerHTML=a.value
+                
+            }
+            else if( b.checked==true){
+                div.innerHTML= b.value
+            }
+
+        }
+        
+    </script> -->
+
+
+
+
+
+    <label >Gender:</label>
+    <label >Male:</label>
+    <input type="radio" class="male" name="gender" value="male">
+    <label >Female:</label>
+    <input type="radio" class="male" name="gender" value="female">
+    <label >Others</label>
+    <input type="radio" class="male"  name="gender" value="other">
+
+
+    <button onclick="handle_click()">click</button>
+    <div id="di"></div>
+    
+    <script>
+        function handle_click(){
+            var a = document.getElementsByClassName("male")
+            var div = document.getElementById("di")
+            
+            
+                for(i=0 ; i<a.length ; i++){
+                    if(a[i].checked==true ){
+                        var p = document.createElement("P")
+                        p.innerHTML=a[i].value
+                        div.appendChild(p)
+
+             }
+        }
+            
+            
+
+        }
+        
+    </script>
+
+
+
+    
+</body>
+</html>
