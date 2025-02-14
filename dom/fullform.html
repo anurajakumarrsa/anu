@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <label >FIRST NAME :</label>
+        <input type="text" class="form"><br><br>
+
+        <label >LAST NAME :</label>
+        <input type="text" class="form"><br><br>
+
+        <label >NUMBER  :</label>
+        <input type="num" class="form" ><br><br>
+
+        <label >EMAIL</label>
+        <input type="email" class="form"><br><br>
+
+        <label >PASSWORD :</label>
+        <input type="password" class="form"><br><br>
+
+        <label >GENDER :</label>
+     <label >Male:</label>
+    <input type="radio"  class="form" name="gender" value="male">
+    <label >Female:</label>
+    <input type="radio"  class="form"  name="gender" value="female">
+    <label >Others:</label>
+    <input type="radio"  class="form" name="gender"  value="others"><br><br>
+
+    <label>SKILL :</label>
+     <label >html</label>
+    <input type="checkbox" class="form" value="html">
+    <label >css</label>
+    <input type="checkbox" class="form" value="css">
+    <label >dom</label>
+    <input type="checkbox" class="form" value="dom">
+    <label >java</label>
+    <input type="checkbox" class="form" value="java">
+    <label >react</label>
+    <input type="checkbox" class="form" value="react"><br><br>
+
+    <label >DISTRICT</label>
+    <select class="form">
+    <option value="kanyakumari" class="form">kanyakumari</option>
+    <option value="tirunelveli" class="form">Tirunelveli</option>
+</select><br><br>
+</form>
+    <button onclick="handle_click(event)">sumbit</button>
+    <div id="div"></div>
+    <div id="div1"></div>
+
+    <!-- <script>
+        function handle_click(){
+            var a = document.getElementsByClassName("form")
+            var div = document.getElementById("div")
+             div.innerHTML= ""
+
+            for(i=0 ; i<a.length ; i++){ 
+                  if (a[i].checked==true){  
+                    var p = document.createElement("p")
+                     p.innerHTML = a[i].value
+                    div.appendChild(p)
+
+        }
+    }
+}
+    </script> -->
+
+  <script>
+        function handle_click(e){
+            e.preventDefault()
+            var a = document.getElementsByClassName("form")
+             var div = document.getElementById("div")
+             var div1 = document.getElementById("div1")
+             div.innerHTML= ""
+             div1.innerHTML= ""
+
+            for(i=0 ; i<a.length ; i++){ 
+                
+                
+                    if (a[i].checked==true){  
+                    var p = document.createElement("p")
+                     p.innerHTML = a[i].value
+                     div.appendChild(p)
+                    }
+                }
+                    for(j=0 ; j<a.length ; j++){
+                     if (a[j].checked==true){  
+                    var p = document.createElement("p")
+                     p.innerHTML = a[j].value
+                     div1.appendChild(p)
+
+                     }
+                    }
+                
+             }
+
+    </script> 
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+   
+    
+</body>
+</html>

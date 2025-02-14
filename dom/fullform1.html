@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data</title>
+</head>
+<body>
+    <form id="text1">
+        <label>Email :</label>
+        <input type="email" class="text"><br><br>
+        
+        <label>Name :</label>
+        <input type="text" class="text"><br><br>
+        
+        <label>Password :</label>
+        <input type="password" class="text"><br><br>
+        
+        <label>Number :</label>
+        <input type="number" class="text"><br><br>
+        
+        <label>Gender :</label>
+        <input type="radio" class="text" value="Male" name="gender"> Male
+        <input type="radio" class="text" value="Female" name="gender"> Female
+        <input type="radio" class="text" value="Others" name="gender"> Others<br><br>
+        
+        <label>Skills :</label>
+        <input name="skills" class="text" value="HTML" type="checkbox"> HTML
+        <input name="skills" class="text" value="CSS" type="checkbox"> CSS
+        <input name="skills" class="text " value="JS" type="checkbox"> JS
+        <input name="skills" class="text" value="REACT" type="checkbox"> REACT<br><br>
+        
+        <label>City :</label>
+        <select class="text">
+            <option value="">----Please select district -----</option>
+            <option value="Tiruchy">Tiruchy</option>
+            <option value="Madurai">Madurai</option>
+            <option value="Nagercoil">Nagercoil</option>
+            <option value="Kannyakumari">Kannyakumari</option>
+            <option value="Chennai">Chennai</option>
+        </select>
+
+        <button onclick="handle_click(event)">Submit</button>
+        <div id="output"></div>
+       <ol id="checkboxOutput"></ol>
+
+        
+    </form>
+
+    <script>
+        function handle_click(e) {
+            e.preventDefault();
+            
+            var inputs = document.querySelectorAll(".text");
+            var output = document.getElementById("output");
+            var checkboxOutput = document.getElementById("checkboxOutput");
+            
+            output.innerHTML = ""; 
+            checkboxOutput.innerHTML = ""; 
+
+            for (let i = 0; i < inputs.length; i++) {
+                let input = inputs[i];
+
+                if (input.type !== "radio" && input.type !== "checkbox" && input.value.trim() === "") {
+                    continue;
+                }
+
+                if ((input.type !== "radio" && input.type !== "checkbox") || (input.type === "radio" && input.checked)) {
+                    let p = document.createElement("p");
+                    p.textContent = input.value;
+                    output.appendChild(p);
+                }
+
+                if (input.type === "checkbox" && input.checked) {
+                    let li = document.createElement("li");
+                    li.textContent = input.value;
+                    checkboxOutput.appendChild(li);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
