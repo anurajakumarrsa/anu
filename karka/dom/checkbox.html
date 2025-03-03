@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>SKILL </label>
+    <br>
+    
+    <label >html</label>
+    <input type="checkbox" class="checkbox" value="html">
+    <label >css</label>
+    <input type="checkbox" class="checkbox" value="css">
+    <label >dom</label>
+    <input type="checkbox" class="checkbox" value="dom">
+    <label >java</label>
+    <input type="checkbox" class="checkbox" value="java">
+    <label >react</label>
+    <input type="checkbox" class="checkbox" value="react">
+    
+    <button onclick="handle_click()">click</button>
+    <ol id="list"></ol>
+
+    <script>
+        function handle_click(){
+             var a = document.getElementsByClassName("checkbox")
+            var  b = document.getElementById("list")
+            b.innerHTML= ""
+            
+            for(i=0 ; i<a.length ; i++){
+                if (a[i].checked==true){
+                    var p = document.createElement("li")
+                    p.innerHTML = a[i].value
+                    b.appendChild(p)
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

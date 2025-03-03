@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <scrip>
+        localStorage.setItem("name","karka")
+         console.log(name)
+   </script> -->
+
+   <!-- <input type="text" id="in">
+   <button onclick="handle_click()">click</button>
+   <script>
+      function handle_click(){
+        var a = document.getElementById("in").value
+        localStorage.setItem("name",a)
+      }
+   </script> -->
+
+   <script>
+      let array = ["apple","mango",23]
+      localStorage.setItem("arrays",JSON.stringify(array))
+      var b = JSON.parse(localStorage.getItem("arrays"))
+      for (i=0 ;i<b.length;i++){
+        console.log(b[i])
+      }
+      console.log(b)
+
+   </script>
+    
+</body>
+</html>

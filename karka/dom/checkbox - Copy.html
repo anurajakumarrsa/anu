@@ -21,12 +21,12 @@
     <input type="checkbox" class="checkbox" value="react">
     
     <button onclick="handle_click()">click</button>
-    <ol id="ol1"></ol>
+    <ol id="list"></ol>
 
     <script>
         function handle_click(){
              var a = document.getElementsByClassName("checkbox")
-            var  b = document.getElementById("ol1")
+            var  b = document.getElementById("list")
             b.innerHTML= ""
             
             for(i=0 ; i<a.length ; i++){
