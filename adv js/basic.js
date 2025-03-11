@@ -11,7 +11,7 @@
 // const string =() => "anu"
 // console.log(string())
 
-const add =()=>{
-    return "anu"
-}
-console.log(add())
+// const add =()=>{
+//     return "anu"
+// }
+// console.log(add())
