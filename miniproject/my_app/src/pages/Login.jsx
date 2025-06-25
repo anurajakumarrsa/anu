@@ -11,7 +11,7 @@ const Login = () => {
   };
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", mt: 8 }}>
+    <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
       <Paper sx={{ p: 4, width: "100%", maxWidth: 400 }}>
         <Typography variant="h5" sx={{ mb: 3, textAlign: "center", fontWeight: "bold" }}>
           Login
@@ -23,7 +23,7 @@ const Login = () => {
             sx={{ mb: 2 }}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
+            
           />
           <TextField
             label="Password"
